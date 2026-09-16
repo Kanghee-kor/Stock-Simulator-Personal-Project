@@ -69,29 +69,28 @@ CSS was used to handle the visual design. The overall theme was inspired by Bloo
 
 ## app.py
 `app.py` is the entry point. It starts Flask, imports `stocks`, `news` and `scheduler`, registers all URL routes and runs the server. <br>
-To see `app.py` click here: [`app.py`](app.py)
+
 
 ## stocks.py
 `stocks.py ` is the brain of the application. It contains TICKERS dictionary which has the 50+ stocks with symbol, currency, sector, region and news query. Also it contains all portfolio functions (buy, sell, get portfolio, reset), price fetching with caching, currency conversion and the entire prediction system (save, load, evaluate, compute metrics) <br>
-To see `stocks.py` click here: [`stocks.py`](stocks.py)
+
 
 ## news.py
 `news.py` handles all external news API communication and sentiment analysis. It is completely independent with the rest of the system and it only needs a company name and it returns headlines and a sentiment verdict. <br>
-To see `news.py` click here: [`news.py`](news.py)
+
 
 ## scheduler.py
 `scheduler.py` runs inside the Flask server as a background thread. It calls `news.py` and `stocks.py` together to generate predictions for all 50+ stocks at 8 AM every trading day. <br>
-To see `scheduler.py` click here: [`scheduler.py`](scheduler.py)
+
 
 ## index.html
-`index.html` is a single HTML page used for tab-based layout: [`index.html`](index.html)
-
+`index.html` is a single HTML page used for tab-based layout: 
 ## style.css 
-`style.css` is a code that styles the whole website: [`style.css`](style.css)
+`style.css` is a code that styles the whole website: 
 
 ## script.js 
 `script.js` is a code with all frontend logic that is responsible with fetching, rendering and charts. <br>
-To see `script.js` click here: [`script.js`](script.js)
+
 
 # Additional Markdown
 
